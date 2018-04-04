@@ -29,6 +29,28 @@ class Config(object):
         db=DB_NAME
     )
 
+    # Celery Config
+
+    # RabbitMQ Config
+    RABBIT_PROTOCOL = "amqp"
+    RABBIT_USER = "lmn_celery"
+    RABBIT_HOST = "localhost"
+    RABBIT_PORT = "5672"
+    RABBIT_PW = os.getenv("LMN_RABBIT_PW")
+    RABBIT_VHOST = "lmn_celery"
+
+    # BROKER_URL = 'amqp://myuser:mypassword@localhost:5672/myvhost'
+    BROKER_TEMPLATE = "{protocol}://{user}:{pw}@{host}:{port}/{vhost}"
+
+    BROKER_URL = BROKER_TEMPLATE.format(
+        protocol=RABBIT_PROTOCOL,
+        user=RABBIT_USER,
+        pw=RABBIT_PW,
+        host=RABBIT_HOST,
+        port=RABBIT_PORT,
+        vhost=RABBIT_VHOST
+    )
+
 
 # Overrides the default Config Object for Production
 class ProductionConfig(Config):
