@@ -3,6 +3,8 @@ from utils.api.bit_venue import Venue
 from utils.api.bit_event import Event
 from utils.api.bit_artist import Artist
 
+from
+
 from json import JSONDecodeError
 from logging import Logger
 
@@ -77,7 +79,8 @@ def get_events_data(artist: str) -> dict or bool(False):
         events_data: dict = requests.get(composite_url).json()
 
         if not events_data:
-            return False  # Artist Found, Found No Upcoming Event -- returns [] -- i.e. False as --> [] == False
+            return False
+            # if (Artist) Found and not (Upcoming Event): returns [], as [] == False
 
         elif "errors" in events_data:
                 if events_data['errors'] == ["Unknown Artist"]:
@@ -93,34 +96,28 @@ def get_events_data(artist: str) -> dict or bool(False):
 def parse_event_list_from_events(events_data: dict) -> [Event]:
 
     """
-    :param events_data: dict holds JSON data for Event objects, all Events are passed to a list that is then returned
+    :param dict events_data:
+        dict JSON data parsed in to event instances, each stored in a list & list is returned
     :return: [Event]
     """
 
     return [construct_event(event) for event in events_data]
 
-    # return [Event(event['id'],
-    #               event['artist_id'],
-    #               event['url'],
-    #               event['on_sale_datetime'],
-    #               event['datetime'],
-    #               event['description'],
-    #               event['venue']['name'],
-    #               event['venue']['city'],
-    #               event['venue']['country'],
-    #               event['lineup'])
-    #         for event in events_data]
-
 
 def parse_venue_list_from_events(events_data: dict) -> [Venue]:
 
+    """
+    :param dict events_data:
+    :return: [Venue]
+    """
     return [construct_venue(event['venue']) for event in events_data]
 
 
 def construct_event(event_data: dict) -> Event:
 
     """
-    :param  dict event_data: dict** of (1) event parsed from Bandsintown /Artist/Events API JSON response data
+    :param  dict event_data:
+        dict** of (1) event parsed from Bandsintown /Artist/Events API JSON response data
     :return Event
 
     """
