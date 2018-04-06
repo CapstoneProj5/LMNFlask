@@ -1,0 +1,144 @@
+https://www.songkick.com/developer/upcoming-events-for-artist
+
+
+====================================================
+REQUEST ENDPOINTS
+====================================================
+
+    JSON
+        http://api.songkick.com/api/3.0/artists/{artist_id}/calendar.json?apikey={your_api_key}
+
+    XML
+        http://api.songkick.com/api/3.0/artists/{artist_id}/calendar.xml?apikey={your_api_key}
+
+
+
+====================================================
+REQUEST PARAMETERS
+====================================================
+
+    apikey
+        Required
+        Your API key.
+
+    artist_id
+        Required unless mbid:{music_brainz_id} specified
+        The ID of the artist to return events for.
+
+    music_brainz_id
+        Required unless artist_id specified
+        The MusicBrainz ID of the artist to return events for.
+
+    min_date
+        Optional
+        A date in the form YYYY-MM-DD.
+
+    max_date
+        Optional
+        A date in the form YYYY-MM-DD.
+
+    page
+        Optional
+        Results are paginated. This specifies the results page number. (First page = 1)
+
+    per_page
+        Optional
+        The number of results to return in each page. (Max 50)
+
+    order
+        Optional
+        Results are ordered by date: 'asc' or 'desc'. (Default = 'asc')
+
+
+====================================================
+REQUEST NOTES
+====================================================
+
+
+    Date range
+
+        When specifying min_date or max_date, you need to use both parameters.
+        Use the same value for both to get events for a single day.
+        This search returns only upcoming events.
+
+    Sorting events
+
+        Results are sorted by event date.
+        The order can be specified with 'asc' or 'desc' (default = 'asc')
+
+
+
+====================================================
+RESPONSE EXAMPLE
+====================================================
+
+    {
+  "resultsPage": {
+    "results": {
+      "event": [
+        {
+          "id":11129128,
+          "type":"Concert",
+          "uri":"http://www.songkick.com/concerts/11129128-wild-flag-at-fillmore?utm_source=PARTNER_ID&utm_medium=partner",
+          "displayName":"Wild Flag at The Fillmore (April 18, 2012)",
+          "start": {
+            "time":"20:00:00",
+            "date":"2012-04-18",
+            "datetime":"2012-04-18T20:00:00-0800"
+          },
+          "performance": [
+            {
+              "artist": {
+                "id":29835,
+                "uri":"http://www.songkick.com/artists/29835-wild-flag?utm_source=PARTNER_ID&utm_medium=partner",
+                "displayName":"Wild Flag",
+                "identifier": []
+              },
+              "id":21579303,
+              "displayName":"Wild Flag",
+              "billingIndex":1,
+              "billing":"headline"
+            }
+          ],
+          "location": {
+            "city":"San Francisco, CA, US",
+            "lng":-122.4332937,
+            "lat":37.7842398
+          },
+          "venue": {
+            "id":6239,
+            "displayName":"The Fillmore",
+            "uri":"http://www.songkick.com/venues/6239-fillmore?utm_source=PARTNER_ID&utm_medium=partner",
+            "lng":-122.4332937,
+            "lat":37.7842398,
+            "metroArea": {
+              "id":26330,
+              "uri":"http://www.songkick.com/metro_areas/26330-us-sf-bay-area?utm_source=PARTNER_ID&utm_medium=partner",
+              "displayName":"SF Bay Area",
+              "country": { "displayName":"US" },
+              "state": { "displayName":"CA" }
+            }
+          },
+          "status":"ok",
+          "popularity":0.012763
+        }, ....
+      ]
+    },
+    "totalEntries":24,
+    "perPage":50,
+    "page":1,
+    "status":"ok"
+  }
+}
+
+
+
+
+======================================================
+RESPONSE NOTES
+======================================================
+
+
+    It is possible for a festival or concert to not have a venue. This is typically for shows where the artist wants to announce a show/tour but doesn’t want to announce the venues yet. This can also happen with festivals such as SXSW, where a venue is not specified and so appear as having an 'unknown venue'.
+
+    Although the majority of festivals will have venues, there is some logic in our artist widgets that recognises when a festival or event has 'unknown venue' and displays the City or festival name instead. It might make sense for you to implement similar logic when using our API.

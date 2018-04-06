@@ -1,0 +1,68 @@
+https://www.songkick.com/developer/similar-artists
+
+
+====================================================
+REQUEST ENDPOINTS
+====================================================
+
+    JSON
+    http://api.songkick.com/api/3.0/artists/{artist_id}/similar_artists.json?apikey={your_api_key}
+
+    XML
+    http://api.songkick.com/api/3.0/artists/{artist_id}/similar_artists.xml?apikey={your_api_key}
+
+
+
+
+====================================================
+REQUEST PARAMETERS
+====================================================
+
+apikey
+    Required
+    Your API key.
+
+artist_id
+    Required
+    The ID of the artist to return similar artists for.
+
+page
+    Optional
+    Results are paginated. This specifies the results page number. (First page = 1)
+
+per_page
+    Optional
+    The number of results to return in each page. (Max 50)
+
+
+
+====================================================
+RESPONSE EXAMPLE GIVEN
+====================================================
+
+     {
+      "resultsPage": {
+        "results": {
+          "artist": [
+            {
+              "displayName": "Gorillaz",
+              "id": 68043,
+              "identifier": [
+                {
+                  "eventsHref": "http://api.songkick.com/api/3.0/artists/mbid:e21857d5-3256-4547-afb3-4b6ded592596/calendar.json",
+                  "href": "http://api.songkick.com/api/3.0/artists/mbid:e21857d5-3256-4547-afb3-4b6ded592596.json",
+                  "mbid": "e21857d5-3256-4547-afb3-4b6ded592596",
+                  "setlistsHref": "http://api.songkick.com/api/3.0/artists/mbid:e21857d5-3256-4547-afb3-4b6ded592596/setlists.json"
+                }
+              ],
+              "onTourUntil": null,
+              "uri": "http://www.songkick.com/artists/68043-gorillaz?utm_source=1976&utm_medium=partner"
+            }
+          ]
+        },
+        "status": "ok",
+        "perPage": 50,
+        "page": 1,
+        "totalEntries": 136
+      }
+    }

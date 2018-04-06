@@ -1,0 +1,21 @@
+***
+    "Location is a simplified object representing a city on Songkick"
+***
+
+
+======= FORMAT =======
+
+    city: (str)
+
+    lat: (float) [nullable]
+
+    lng: (float) [nullable]
+
+
+======= EXAMPLE GIVEN ========
+
+      {
+        "city":"San Francisco, CA, US",
+        "lat":37.7842398,
+        "lng":-122.4332937
+      }

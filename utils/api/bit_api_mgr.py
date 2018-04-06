@@ -3,8 +3,6 @@ from utils.api.bit_venue import Venue
 from utils.api.bit_event import Event
 from utils.api.bit_artist import Artist
 
-from
-
 from json import JSONDecodeError
 from logging import Logger
 
