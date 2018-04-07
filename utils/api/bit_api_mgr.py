@@ -23,6 +23,7 @@ def get_artist_data(artist: str) -> dict or bool(False):
     :return: dict or False
 
     """
+    
     url_suffix: str = '/artists/{}?app_id={}'.format(artist, bid_api_key)
 
     composite_url: str = bid_base_url + url_suffix
