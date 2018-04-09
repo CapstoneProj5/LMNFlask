@@ -1,4 +1,7 @@
-from LMNFlask.utils.songkick_api import sk_performance, sk_location, sk_venue
+
+from utils.songkick_api.sk_location import Location
+from utils.songkick_api.sk_performance import Performance
+from utils.songkick_api.sk_venue import Venue
 
 
 class Event:
@@ -10,9 +13,9 @@ class Event:
             uri:         str,
             displayName: str,
             start:       dict,
-            performers:  sk_performance,
-            location:    sk_location,
-            venue:       sk_venue,
+            performances:  [Performance] or [dict],
+            location:    Location or dict,
+            venue:       Venue or dict,
             status:      str,
             popularity:  float):
 
@@ -21,7 +24,7 @@ class Event:
             self.uri = uri
             self.event_name = displayName
             self.start = start
-            self.performances = performers
+            self.performances = performances
             self.location = location
             self.venue = venue
             self.status = status
@@ -48,7 +51,7 @@ class Event:
             self.event_name,
             self.start['date'],
             self.start['time'],
-            self.performances.__str__(),
+            ', \n'.join([performance.__str__() for performance in self.performances]),
             self.location.__str__(),
             self.venue.__str__(),
             self.status,

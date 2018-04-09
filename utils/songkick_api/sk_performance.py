@@ -1,18 +1,17 @@
-from LMNFlask.utils.songkick_api import sk_artist
-from LMNFlask.utils.songkick_api.sk_artist import Artist
+from utils.songkick_api.sk_artist import Artist
 
 
 class Performance:
 
     def __init__(
             self,
-            performers:   list,
+            artist:    Artist,
             name:         str,
             billingIndex: int,
             sk_id:        int,
             billing:      str):
 
-            self.performers = performers
+            self.artist = artist
             self.name = name
             self.billingIndex = billingIndex
             self.sk_id = sk_id
@@ -21,13 +20,11 @@ class Performance:
     def __str__(self) -> str:
 
         return "       \n" \
-           "Artists: {} \n" \
-           "Name: {}   \n" \
-           "Slot: {}   \n" \
-           "ID: {}     \n" \
-           "Billing: {}\n".format(
+           "\tName: {}   \n" \
+           "\tSlot: {}   \n" \
+           "\tPerformance_ID: {}     \n" \
+           "\tBilling: {}\n".format(
 
-            ', '.join([act.displayName for act in self.performers]),
             self.name,
             str(self.billingIndex),
             str(self.sk_id),
