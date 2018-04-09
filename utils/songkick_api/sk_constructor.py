@@ -14,7 +14,7 @@ def build_artist(artist_data: dict) -> Artist:
 
         artist_data['id'],
         artist_data['displayName'],
-        artist_data['uri'],
+        str(artist_data['uri']),
         artist_data['identifier'][0]['mbid'],
         artist_data['onTourUntil'])
 
@@ -48,7 +48,7 @@ def build_city(city_data: dict) -> City:
 
         city_data['id'],
         city_data['displayName'],
-        city_data['uri'],
+        str(city_data['uri']),
         city_data['country']['displayName'])
 
 
@@ -59,7 +59,7 @@ def build_event(event_data: dict) -> Event:
 
         event_data['id'],
         event_data['type'],
-        event_data['uri'],
+        str(event_data['uri']),
         event_data['displayName'],
         event_data['start'],
         build_performance(event_data['performance']),
@@ -71,12 +71,17 @@ def build_event(event_data: dict) -> Event:
 
 
 def build_venue(venue_data: dict) -> Venue:
+    """
+
+    :param dict venue_data:
+    :return:
+    """
 
     return Venue(
 
         venue_data['id'],
         venue_data['displayName'],
-        venue_data['uri'],
+        str(venue_data['uri']),
         venue_data['metroArea'],
         build_city(venue_data['city']),
         venue_data['street'],

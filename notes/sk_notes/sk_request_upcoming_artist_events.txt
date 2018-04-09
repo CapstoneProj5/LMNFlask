@@ -72,6 +72,763 @@ REQUEST NOTES
 RESPONSE EXAMPLE
 ====================================================
 
+{
+    'type': 'Festival',
+
+    'popularity': 0.181054,
+
+    'displayName': 'Heavy Montréal 2018',
+
+    'status': 'ok',
+
+    'performance':
+
+        [
+
+            //PERFORMANCE
+            {
+                'displayName': 'Avenged Sevenfold',
+                'billingIndex': 1,
+                'billing': 'headline',
+                'artist': {
+                    'displayName': 'Avenged Sevenfold',
+                    'identifier': [{
+                           'href': 'http://api.songkick.com/api/3.0/artists/mbid:24e1b53c-3085-4581-8472-0b0088d2508c.json',
+                            'mbid': '24e1b53c-3085-4581-8472-0b0088d2508c'
+                    }],
+                    'uri': 'http://www.songkick.com/artists/425252-avenged-sevenfold?utm_source=14198&utm_medium=partner',
+                    'id': 425252
+                },
+                'id': 64002484
+            },
+
+            //PERFORMANCE
+            {
+                'displayName': 'Marilyn Manson',
+                'billingIndex': 2,
+                'billing': 'headline',
+                'artist': {
+                    'displayName': 'Marilyn Manson',
+                    'identifier': [
+                        {
+                            'href': 'http://api.songkick.com/api/3.0/artists/mbid:5dfdca28-9ddc-4853-933c-8bc97d87beec.json',
+                            'mbid': '5dfdca28-9ddc-4853-933c-8bc97d87beec'
+                        },
+                        {
+                            'href': 'http://api.songkick.com/api/3.0/artists/mbid:80cadd99-f560-41e3-babd-16292bbd248a.json',
+                            'mbid': '80cadd99-f560-41e3-babd-16292bbd248a'
+                        }
+                    ],
+                    'uri': 'http://www.songkick.com/artists/317102-marilyn-manson?utm_source=14198&utm_medium=partner',
+                    'id': 317102
+                },
+                'id': 64002494
+            },
+
+            //PERFORMANCE
+            {
+                'displayName': 'Rob Zombie',
+                'billingIndex': 3,
+                'billing': 'headline',
+                'artist': {
+                    'displayName': 'Rob Zombie',
+                    'identifier': [{
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:c995a379-60b9-404b-bd97-a7e2de0751d3.json',
+                        'mbid': 'c995a379-60b9-404b-bd97-a7e2de0751d3'
+                    }],
+                    'uri': 'http://www.songkick.com/artists/246083-rob-zombie?utm_source=14198&utm_medium=partner',
+                    'id': 246083
+                },
+                'id': 64002479
+            },
+
+            //PERFORMANCE
+            {
+                'displayName': 'Asking Alexandria',
+                'billingIndex': 4,
+                'billing': 'headline',
+                'artist': {
+                    'displayName': 'Asking Alexandria',
+                    'identifier': [{
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:9d2fde91-4633-430d-87f0-2b9bbb7fa451.json',
+                        'mbid': '9d2fde91-4633-430d-87f0-2b9bbb7fa451'
+                    }],
+                    'uri': 'http://www.songkick.com/artists/1964884-asking-alexandria?utm_source=14198&utm_medium=partner',
+                    'id': 1964884
+                },
+                'id': 63368634
+            },
+
+            //PERFORMANCE
+            {
+                'displayName': 'Hollywood Undead',
+                'billingIndex': 5,
+                'billing': 'headline',
+                'artist': {
+                    'displayName': 'Hollywood Undead',
+                    'identifier': [{
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:321fdfbb-426b-43f7-8295-fa9aca6348d9.json',
+                        'mbid': '321fdfbb-426b-43f7-8295-fa9aca6348d9'
+                    }],
+                    'uri': 'http://www.songkick.com/artists/818463-hollywood-undead?utm_source=14198&utm_medium=partner',
+                    'id': 818463
+                },
+                'id': 63427524
+            },
+
+            //PERFORMANCE
+            {
+                'displayName': 'Tech N9ne',
+                'billingIndex': 6,
+                'billing': 'headline',
+                'artist': {
+                    'displayName': 'Tech N9ne',
+                    'identifier': [{
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:dde3d9b1-0e44-48bc-b0c9-d739b3570000.json',
+                        'mbid': 'dde3d9b1-0e44-48bc-b0c9-d739b3570000'
+                        },
+                        {
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:896df65b-a968-41ed-a7ed-d106e9e5da15.json',
+                        'mbid': '896df65b-a968-41ed-a7ed-d106e9e5da15'
+                    }],
+                    'uri': 'http://www.songkick.com/artists/283009-tech-n9ne?utm_source=14198&utm_medium=partner',
+                    'id': 283009
+                },
+                'id': 64002894
+            },
+
+            //PERFORMANCE
+            {
+                'displayName': 'Trivium',
+                'billingIndex': 7, 'billing':
+                'headline',
+                'artist': {
+                    'displayName': 'Trivium',
+                    'identifier': [{
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:1f5ff245-2837-4d4a-a609-e93e544478c3.json',
+                        'mbid': '1f5ff245-2837-4d4a-a609-e93e544478c3'
+                    }],
+                    'uri': 'http://www.songkick.com/artists/108040-trivium?utm_source=14198&utm_medium=partner',
+                    'id': 108040
+                },
+                'id': 63368674
+            },
+
+            //PERFORMANCE
+            {
+                'displayName': 'Underoath',
+                'billingIndex': 8,
+                'billing': 'headline',
+                'artist': {
+                    'displayName': 'Underoath',
+                    'identifier': [{
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:674a7e8c-9682-419a-8e05-2358e28b5359.json',
+                        'mbid': '674a7e8c-9682-419a-8e05-2358e28b5359'
+                    }],
+                    'uri': 'http://www.songkick.com/artists/2357960-underoath?utm_source=14198&utm_medium=partner',
+                    'id': 2357960
+                },
+                'id': 63395694
+            },
+
+            //PERFORMANCE
+            {
+                'displayName': 'Ratt',
+                'billingIndex': 9,
+                'billing': 'headline',
+                'artist': {
+                    'displayName': 'Ratt',
+                    'identifier': [{
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:e0827234-3be3-4973-be59-1aa9575b9c76.json',
+                        'mbid': 'e0827234-3be3-4973-be59-1aa9575b9c76'
+                    }],
+                    'uri': 'http://www.songkick.com/artists/423695-ratt?utm_source=14198&utm_medium=partner',
+                    'id': 423695
+                },
+                'id': 64002499
+            },
+
+            //PERFORMANCE
+            {
+                'displayName': 'Gojira',
+                'billingIndex': 10,
+                'billing': 'headline',
+                'artist': {
+                    'displayName': 'Gojira',
+                    'identifier': [{
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:1c5efd53-d6b6-4d63-9d22-a15025cf5f07.json',
+                        'mbid': '1c5efd53-d6b6-4d63-9d22-a15025cf5f07'
+                    }],
+                    'uri': 'http://www.songkick.com/artists/421264-gojira?utm_source=14198&utm_medium=partner',
+                    'id': 421264
+                },
+                'id': 64002489
+            },
+
+            //PERFORMANCE
+            {
+                'displayName': 'Between The Buried And Me',
+                'billingIndex': 11,
+                'billing': 'headline',
+                'artist': {
+                    'displayName': 'Between The Buried And Me',
+                    'identifier': [{
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:1870fb43-50f1-4660-a879-bb596d1519b6.json',
+                        'mbid': '1870fb43-50f1-4660-a879-bb596d1519b6'
+                    }],
+                    'uri': 'http://www.songkick.com/artists/391106-between-the-buried-and-me?utm_source=14198&utm_medium=partner',
+                    'id': 391106
+                },
+                'id': 64002889
+            },
+
+            //PERFORMANCE
+            {
+                'displayName': 'The Black Dahlia Murder',
+                'billingIndex': 12,
+                'billing': 'headline',
+                'artist': {
+                    'displayName': 'The Black Dahlia Murder',
+                    'identifier': [{
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:21f3573f-10cf-44b3-aeaa-26cccd8448b5.json',
+                        'mbid': '21f3573f-10cf-44b3-aeaa-26cccd8448b5'
+                    }],
+                    'uri': 'http://www.songkick.com/artists/117567-black-dahlia-murder?utm_source=14198&utm_medium=partner',
+                    'id': 117567
+                },
+                'id': 64002919
+            },
+
+
+            //PERFORMANCE
+            {
+                'displayName': 'Baroness',
+                'billingIndex': 13, 'billing':
+                'headline',
+                'artist': {
+                    'displayName': 'Baroness',
+                    'identifier': [{
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:2a536c66-af8d-4f9d-8c9b-4c7a7eed6567.json',
+                        'mbid': '2a536c66-af8d-4f9d-8c9b-4c7a7eed6567'
+                        },
+                        {
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:eeb41a1e-4326-4d04-8c47-0f564ceecd68.json',
+                        'mbid': 'eeb41a1e-4326-4d04-8c47-0f564ceecd68'
+                    }],
+                    'uri': 'http://www.songkick.com/artists/184832-baroness?utm_source=14198&utm_medium=partner',
+                    'id': 184832
+                },
+                'id': 63769704
+            },
+
+            //PERFORMANCE
+            {
+                'displayName': 'I Prevail',
+                'billingIndex': 14,
+                'billing': 'headline',
+                'artist': {
+                    'displayName': 'I Prevail',
+                    'identifier': [{
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:1921c28c-ec61-4725-8e35-38dd656f7923.json',
+                        'mbid': '1921c28c-ec61-4725-8e35-38dd656f7923'
+                    }],
+                    'uri': 'http://www.songkick.com/artists/8428388-i-prevail?utm_source=14198&utm_medium=partner',
+                    'id': 8428388
+                },
+                'id': 64002884
+            },
+
+            //PERFORMANCE
+            {
+                'displayName': 'Red Fang',
+                'billingIndex': 15,
+                'billing': 'headline',
+                'artist': {
+                    'displayName': 'Red Fang',
+                    'identifier': [{
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:fb2cc158-0ad2-4dc5-a6b6-b2a1a8e2fe65.json',
+                        'mbid': 'fb2cc158-0ad2-4dc5-a6b6-b2a1a8e2fe65'
+                    }],
+                    'uri': 'http://www.songkick.com/artists/567141-red-fang?utm_source=14198&utm_medium=partner',
+                    'id': 567141
+                },
+                'id': 64002899
+            },
+
+            //PERFORMANCE
+            {
+                'displayName': 'Sleep',
+                'billingIndex': 16,
+                'billing': 'headline',
+                'artist': {
+                    'displayName': 'Sleep',
+                    'identifier': [{
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:11bed36a-10ca-43c5-9554-c85ee3eb7de8.json',
+                        'mbid': '11bed36a-10ca-43c5-9554-c85ee3eb7de8'
+                        },
+                        {
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:a58100f4-a2f9-4972-a163-41949f187909.json',
+                        'mbid': 'a58100f4-a2f9-4972-a163-41949f187909'},
+                        {
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:6fc69ec6-3e59-4ff7-849d-b5da932abe4d.json',
+                        'mbid': '6fc69ec6-3e59-4ff7-849d-b5da932abe4d'},
+                        {
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:64033796-678f-43cf-a269-07226697fa81.json',
+                        'mbid': '64033796-678f-43cf-a269-07226697fa81'
+                        },
+                        {
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:8cf197e9-2d34-40d9-8195-ba9c3884d31d.json',
+                        'mbid': '8cf197e9-2d34-40d9-8195-ba9c3884d31d'
+                    }],
+                    'uri': 'http://www.songkick.com/artists/512162-sleep?utm_source=14198&utm_medium=partner',
+                    'id': 512162
+                },
+                'id': 64002934
+            },
+
+            //PERFORMANCE
+            {
+                'displayName': 'Napalm Death',
+                'billingIndex': 17,
+                'billing': 'headline',
+                'artist': {
+                    'displayName': 'Napalm Death',
+                    'identifier': [{
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:ce7bba8b-026b-4aa6-bddb-f98ed6d595e4.json',
+                        'mbid': 'ce7bba8b-026b-4aa6-bddb-f98ed6d595e4'
+                    }],
+                    'uri': 'http://www.songkick.com/artists/191492-napalm-death?utm_source=14198&utm_medium=partner',
+                    'id': 191492
+                },
+                'id': 64002909
+            },
+
+            //PERFORMANCE
+            {
+                'displayName': 'Alestorm',
+                'billingIndex': 18,
+                'billing': 'headline',
+                'artist': {
+                    'displayName': 'Alestorm',
+                    'identifier': [{
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:c0252a1b-0133-46bb-8c4f-cade46349ec3.json',
+                        'mbid': 'c0252a1b-0133-46bb-8c4f-cade46349ec3'
+                    }],
+                    'uri': 'http://www.songkick.com/artists/1056026-alestorm?utm_source=14198&utm_medium=partner',
+                    'id': 1056026
+                },
+                'id': 64002879
+            },
+
+            //PERFORMANCE
+            {
+                'displayName': 'Nile',
+                'billingIndex': 19,
+                'billing': 'headline',
+                'artist': {
+                    'displayName': 'Nile',
+                    'identifier': [{
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:adc68a50-38ee-456d-927e-715cbf74c0d5.json',
+                        'mbid': 'adc68a50-38ee-456d-927e-715cbf74c0d5'
+                        },
+                        {
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:fb0bdbb0-ed79-4969-9f17-eb55b707e2d1.json',
+                        'mbid': 'fb0bdbb0-ed79-4969-9f17-eb55b707e2d1'
+                        },
+                        {
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:e5a63cc6-36d9-4d81-8436-b22cbe1e9ccc.json',
+                        'mbid': 'e5a63cc6-36d9-4d81-8436-b22cbe1e9ccc'
+                    }],
+                    'uri': 'http://www.songkick.com/artists/209511-nile?utm_source=14198&utm_medium=partner',
+                    'id': 209511
+                },
+                'id': 64002939
+            },
+
+            //PERFORMANCE
+            {
+                'displayName': 'The Agonist',
+                'billingIndex': 20,
+                'billing': 'headline',
+                'artist': {
+                    'displayName': 'The Agonist',
+                    'identifier': [{
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:d6d9ec73-d0dd-4066-944c-20d4a6d6c7c7.json',
+                        'mbid': 'd6d9ec73-d0dd-4066-944c-20d4a6d6c7c7'
+                    }],
+                    'uri': 'http://www.songkick.com/artists/230575-agonist?utm_source=14198&utm_medium=partner',
+                    'id': 230575
+                },
+                'id': 64002969
+            },
+
+            //PERFORMANCE
+            {
+                'displayName': 'Eyehategod',
+                'billingIndex': 21,
+                'billing': 'headline',
+                'artist': {
+                    'displayName': 'Eyehategod',
+                    'identifier': [{
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:742e54f5-debd-4fc1-a7c1-00edf9b673a5.json',
+                        'mbid': '742e54f5-debd-4fc1-a7c1-00edf9b673a5'
+                    }],
+                    'uri': 'http://www.songkick.com/artists/405154-eyehategod?utm_source=14198&utm_medium=partner',
+                    'id': 405154
+                },
+                'id': 64002504
+            },
+
+            //PERFORMANCE
+            {
+                'displayName': 'Witchcraft',
+                'billingIndex': 22,
+                'billing': 'headline',
+                'artist': {
+                    'displayName': 'Witchcraft',
+                    'identifier': [{
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:9464cc67-7607-47db-973f-08e3a9bce9e0.json',
+                        mbid': '9464cc67-7607-47db-973f-08e3a9bce9e0'
+                        },
+                        {
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:1cd54382-2f9b-40ec-985c-05c1aced2e92.json',
+                        'mbid': '1cd54382-2f9b-40ec-985c-05c1aced2e92'
+                        },
+                        {
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:b3add87c-f814-48c4-a8a5-f0a6f7ead7c1.json',
+                        'mbid': 'b3add87c-f814-48c4-a8a5-f0a6f7ead7c1'
+                        },
+                        {
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:8b3daf5d-6af8-44cb-8fa6-d10a00793201.json',
+                        'mbid': '8b3daf5d-6af8-44cb-8fa6-d10a00793201'
+                        },
+                        {
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:2302b357-67d6-437f-a85b-c183623e9e02.json',
+                        'mbid': '2302b357-67d6-437f-a85b-c183623e9e02'
+                    }],
+                    'uri': 'http://www.songkick.com/artists/207203-witchcraft?utm_source=14198&utm_medium=partner',
+                    'id': 207203
+                },
+                'id': 64002904
+            },
+
+            //PERFORMANCE
+            {
+                'displayName': 'Pallbearer',
+                'billingIndex': 23,
+                'billing': 'headline',
+                'artist': {
+                    'displayName': 'Pallbearer',
+                    'identifier': [{
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:4d263664-5418-4f6c-b46a-36f413044e73.json',
+                        'mbid': '4d263664-5418-4f6c-b46a-36f413044e73'
+                    }],
+                    'uri': 'http://www.songkick.com/artists/4302196-pallbearer?utm_source=14198&utm_medium=partner',
+                    'id': 4302196
+                },
+                'id': 64002924
+            },
+
+            //PERFORMANCE
+            {
+                'displayName': 'Intervals',
+                'billingIndex': 24,
+                'billing': 'headline',
+                'artist': {
+                    'displayName': 'Intervals',
+                    'identifier': [{
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:a5ac1024-3f73-405b-944c-f66fad6aecc3.json',
+                        'mbid': 'a5ac1024-3f73-405b-944c-f66fad6aecc3'
+                        },
+                        {
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:841c76d3-b83d-4eb2-b72b-b640c125ab22.json',
+                        'mbid': '841c76d3-b83d-4eb2-b72b-b640c125ab22'
+                    }],
+                    'uri': 'http://www.songkick.com/artists/82596-intervals?utm_source=14198&utm_medium=partner',
+                    'id': 82596
+                },
+                'id': 64002989
+            },
+
+            //PERFORMANCE
+            {
+                'displayName': 'Havok',
+                'billingIndex': 25,
+                'billing': 'headline',
+                'artist': {
+                    'displayName': 'Havok',
+                    'identifier': [{
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:4c761f9b-f4b9-462c-9f0e-f247e6152767.json',
+                        'mbid': '4c761f9b-f4b9-462c-9f0e-f247e6152767'
+                        },
+                        {
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:c4f35f4b-0716-463b-b3f2-40feede7b2e1.json',
+                        'mbid': 'c4f35f4b-0716-463b-b3f2-40feede7b2e1'
+                    }],
+                    'uri': 'http://www.songkick.com/artists/883465-havok?utm_source=14198&utm_medium=partner',
+                    'id': 883465
+                },
+                'id': 64002974
+            },
+
+            //PERFORMANCE
+            {
+                'displayName': 'Warbringer',
+                'billingIndex': 26,
+                'billing': 'headline',
+                'artist': {
+                    'displayName': 'Warbringer',
+                    'identifier': [{
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:089708ec-2c4a-4159-a3da-2fbb8119736e.json',
+                        'mbid': '089708ec-2c4a-4159-a3da-2fbb8119736e'
+                    }],
+                    'uri': 'http://www.songkick.com/artists/495838-warbringer?utm_source=14198&utm_medium=partner',
+                    'id': 495838
+                },
+                'id': 64002959
+            },
+
+            //PERFORMANCE
+            {
+                'displayName': 'Helix',
+                'billingIndex': 27,
+                'billing': 'headline',
+                'artist': {
+                    'displayName': 'Helix',
+                    'identifier': [{
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:dbf13cf6-3fd6-4994-b93e-389b0a9c72ef.json',
+                        'mbid': 'dbf13cf6-3fd6-4994-b93e-389b0a9c72ef'
+                        },
+                        {
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:c19e5556-6bfd-4c3e-8508-969e6d5435f1.json',
+                        'mbid': 'c19e5556-6bfd-4c3e-8508-969e6d5435f1'
+                        },
+                        {
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:456b12ed-506c-4186-a86c-9df2cbbf7b0c.json',
+                        'mbid': '456b12ed-506c-4186-a86c-9df2cbbf7b0c'
+                    }],
+                    'uri': 'http://www.songkick.com/artists/237644-helix?utm_source=14198&utm_medium=partner',
+                    'id': 237644
+                },
+                'id': 64002949
+            },
+
+            //PERFORMANCE
+            {
+                'displayName': 'Igorrr',
+                'billingIndex': 28,
+                'billing': 'headline',
+                'artist': {
+                    'displayName': 'Igorrr',
+                    'identifier': [{
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:aec46991-e896-4c1f-80cc-aed97b0cdc73.json',
+                        'mbid': 'aec46991-e896-4c1f-80cc-aed97b0cdc73'
+                    }],
+                    'uri': 'http://www.songkick.com/artists/1123659-igorrr?utm_source=14198&utm_medium=partner',
+                    'id': 1123659
+                },
+                'id': 64002914
+            },
+
+            //PERFORMANCE
+            {
+                'displayName': 'Bad Omens',
+                'billingIndex': 29,
+                'billing': 'headline',
+                'artist': {
+                    'displayName': 'Bad Omens',
+                    'identifier': [{
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:eecada09-acfc-472d-ae55-e9e5a43f12d8.json',
+                        'mbid': 'eecada09-acfc-472d-ae55-e9e5a43f12d8'
+                    }],
+                    'uri': 'http://www.songkick.com/artists/4651863-bad-omens?utm_source=14198&utm_medium=partner',
+                    'id': 4651863
+                },
+                'id': 64002984
+            },
+
+            //PERFORMANCE
+            {
+                'displayName': 'Gloryhammer',
+                'billingIndex': 30,
+                'billing': 'headline',
+                'artist': {
+                    'displayName': 'Gloryhammer',
+                    'identifier': [{
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:85997032-ff48-4383-b86a-a920d4230a0b.json',
+                        'mbid': '85997032-ff48-4383-b86a-a920d4230a0b'
+                    }],
+                    'uri': 'http://www.songkick.com/artists/6805239-gloryhammer?utm_source=14198&utm_medium=partner',
+                    'id': 6805239
+                },
+                'id': 64002944
+            },
+
+            //PERFORMANCE
+            {
+                'displayName': 'Blind Witness',
+                'billingIndex': 31,
+                'billing': 'headline',
+                'artist': {
+                    'displayName': 'Blind Witness',
+                    'identifier': [{
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:9c111e47-e8fe-4a21-b9c3-c1869c701d34.json',
+                        'mbid': '9c111e47-e8fe-4a21-b9c3-c1869c701d34'
+                    }],
+                    'uri': 'http://www.songkick.com/artists/1701909-blind-witness?utm_source=14198&utm_medium=partner', '
+                    id': 1701909
+                },
+                'id': 64002964
+            },
+
+            //PERFORMANCE
+            {
+                'displayName': 'Ultra Vomit',
+                'billingIndex': 32,
+                'billing': 'headline',
+                'artist': {
+                    'displayName': 'Ultra Vomit',
+                    'identifier': [{
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:9b1f75d4-46b5-4fe2-8787-027faa1b4f60.json',
+                        'mbid': '9b1f75d4-46b5-4fe2-8787-027faa1b4f60'
+                    }],
+                    'uri': 'http://www.songkick.com/artists/18713-ultra-vomit?utm_source=14198&utm_medium=partner',
+                    'id': 18713
+                },
+                'id': 64002979
+            },
+
+            //PERFORMANCE
+            {
+                'displayName': 'Jinjer',
+                'billingIndex': 33,
+                'billing': 'headline',
+                'artist': {
+                    'displayName': 'Jinjer',
+                    'identifier': [
+                        {'href': 'http://api.songkick.com/api/3.0/artists/mbid:51b37017-859c-465e-8810-2d2dd41a401e.json',
+                        'mbid': '51b37017-859c-465e-8810-2d2dd41a401e'
+                    }], '
+                    uri': 'http://www.songkick.com/artists/1038996-jinjer?utm_source=14198&utm_medium=partner',
+                    'id': 1038996
+                },
+                'id': 64002929
+            },
+
+            //PERFORMANCE
+            {
+                'displayName': 'Khemmis',
+                'billingIndex': 34,
+                'billing': 'headline',
+                'artist': {
+                    'displayName': 'Khemmis',
+                    'identifier': [{
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:425780ef-6214-41cb-a867-4a3aafd4c6e3.json',
+                        'mbid': '425780ef-6214-41cb-a867-4a3aafd4c6e3'
+                    }],
+                    'uri': 'http://www.songkick.com/artists/7382839-khemmis?utm_source=14198&utm_medium=partner',
+                    'id': 7382839
+                },
+                'id': 64002994
+            },
+
+            //PERFORMANCE
+            {
+                'displayName': 'Get the Shot',
+                'billingIndex': 35,
+                'billing': 'headline',
+                'artist': {
+                    'displayName': 'Get the Shot',
+                    'identifier': [{
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:f6576e8c-9c36-4e3f-8131-abc75916a9a0.json',
+                        'mbid': 'f6576e8c-9c36-4e3f-8131-abc75916a9a0'
+                    }],
+                    'uri': 'http://www.songkick.com/artists/5321783-get-the-shot?utm_source=14198&utm_medium=partner',
+                    'id': 5321783
+                },
+                'id': 63480769
+            },
+
+            //PERFORMANCE
+            {
+                'displayName': 'Powertrip',
+                'billingIndex': 36,
+                'billing': 'headline',
+                'artist': {
+                    'displayName': 'Powertrip',
+                    'identifier': [{
+                        'href': 'http://api.songkick.com/api/3.0/artists/mbid:da42e6da-0bed-4fdd-b90f-10a43839f034.json',
+                        'mbid': 'da42e6da-0bed-4fdd-b90f-10a43839f034'
+                    }],
+                    'uri': 'http://www.songkick.com/artists/822287-powertrip?utm_source=14198&utm_medium=partner',
+                    'id': 822287
+                },
+                'id': 64002954
+            },
+
+            //PERFORMANCE
+            {
+                'displayName': 'NonHuman Era',
+                'billingIndex': 37,
+                'billing': 'headline',
+                'artist': {
+                    'displayName': 'NonHuman Era',
+                    'identifier': [],
+                    'uri': 'http://www.songkick.com/artists/8259903-nonhuman-era?utm_source=14198&utm_medium=partner',
+                    'id': 8259903
+                },
+                'id': 64002999
+            }
+
+        ],
+
+        'ageRestriction': None,
+
+        'start': {
+            'datetime': None,
+            'time': None,
+            'date': '2018-07-28'
+        },
+
+        'end': {
+            'datetime': None,
+            'time': None,
+            'date': '2018-07-29'
+        },
+
+        'series': {
+            'displayName': 'Heavy Montréal'
+        },
+
+        'location': {
+            'city': 'Montreal, QC, Canada',
+            'lat': 45.50364,
+            'lng': -73.5292196
+        },
+
+        'uri': 'http://www.songkick.com/festivals/973629-heavy-montreal/id/32938214-heavy-montral-2018?utm_source=14198&utm_medium=partner',
+
+        'id': 32938214,
+
+        'venue': {
+            'displayName':
+            'Parc Jean-Drapeau',
+            'lat': 45.50364,
+            'lng': -73.5292196,
+            'metroArea': {
+                'displayName': 'Montreal',
+                'country': {'displayName': 'Canada'},
+                'uri': 'http://www.songkick.com/metro_areas/27377-canada-montreal?utm_source=14198&utm_medium=partner',
+                'id': 27377,
+                'state': {'displayName': 'QC'}
+            },
+            'uri': 'http://www.songkick.com/venues/47295-parc-jeandrapeau?utm_source=14198&utm_medium=partner',
+            'id': 47295
+        }
+    }
+
+
+
     {
   "resultsPage": {
     "results": {
