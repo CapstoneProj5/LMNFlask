@@ -1,0 +1,5 @@
+https://www.songkick.com/developer/setlists
+
+http://api.songkick.com/api/3.0/events/{event_id}/setlists.json?apikey={your_api_key}
+http://api.songkick.com/api/3.0/events/{event_id}/setlists.xml?apikey={your_api_key}
+

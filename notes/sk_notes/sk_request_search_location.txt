@@ -1,0 +1,125 @@
+https://www.songkick.com/developer/location-search
+
+====================================================
+REQUEST ENDPOINTS
+====================================================
+
+    JSON
+        http://api.songkick.com/api/3.0/search/locations.json?query={search_query}&apikey={your_api_key}
+
+    XML
+        http://api.songkick.com/api/3.0/search/locations.xml?query={search_query}&apikey={your_api_key}
+
+
+====================================================
+REQUEST EXAMPLES
+====================================================
+
+    Search by Name
+        http://api.songkick.com/api/3.0/search/locations.json?query=London&apikey={your_api_key}
+
+    Search by Lat/Lng
+        http://api.songkick.com/api/3.0/search/locations.json?location=geo:{lat,lng}&apikey={your_api_key}
+
+
+====================================================
+REQUEST PARAMETERS
+====================================================
+
+    apikey
+        Required
+        Your API key.
+
+    query
+        Required (unless location specified
+        The name of the location you are searching for.
+
+    location
+        Required unless query specified	One of three options that dictate how the content returned should be localised.
+        See below for usage.
+
+            geo:<lat>,<lng>
+                Localise based on latitude / longitude.
+                Use decimal degrees positive = north and east.
+
+            ip:<ip>
+                Localise based on an IP address.
+                Return all results if address is not present in our database.
+
+            clientip
+                Localise based on IP address of client.
+                Useful for purely client side implementations.
+
+
+    page
+        Optional
+        Results are paginated.
+        This specifies the results page number. (First page = 1)
+
+    per_page
+        Optional
+        The number of results to return in each page. (Max 50)
+
+
+====================================================
+REQUEST NOTES
+====================================================
+
+
+
+
+====================================================
+RESPONSE EXAMPLE
+====================================================
+
+    {
+    "resultsPage": {
+      "results": {
+        "location": [
+          {
+            "city": {
+              "displayName":"London",
+              "country": { "displayName":"UK" },
+              "lng":-0.128,
+              "lat":51.5078
+            },
+            "metroArea": {
+              "id":24426,
+              "uri":"http://www.songkick.com/metro_areas/24426-uk-london",
+              "displayName":"London",
+              "country":{"displayName":"UK"},
+              "lng":-0.128,
+              "lat":51.5078
+            }
+          },
+          {
+            "city": {
+              "displayName":"London",
+              "country":{"displayName":"US"},
+              "lng":null,
+              "lat":null,
+              "state": { "displayName":"KY" }
+            },
+            "metroArea": {
+              "id":24580,
+              "uri":"http://www.songkick.com/metro_areas/24580",
+              "displayName":"Lexington",
+              "country": { "displayName":"US" },
+              "lng":-84.4947,
+              "lat":38.0297,
+              "state": { "displayName":"KY" }
+            }
+          }
+        ]
+      },
+      "totalEntries":2,
+      "perPage":10,
+      "page":1,
+      "status":"ok"
+    }
+  }
+
+
+======================================================
+RESPONSE NOTES
+======================================================

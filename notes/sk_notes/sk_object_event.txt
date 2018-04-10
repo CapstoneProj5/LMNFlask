@@ -1,0 +1,182 @@
+
+NOTES
+
+
+    end               (object)      -- **festivals only**
+
+    performance       (list/array)  -- array[perf. objects] repr each perf in event
+
+    ageRestriction    (str) [nullable]        -- if known*nullable*
+
+
+
+
+
+=====================================================================================
+
+    SUMMARY
+
+
+        id:(int)
+
+        type: (str) ['Concert' OR 'Festival']
+
+        uri: (str)
+
+        displayName: (str)
+
+        start: (dict) {
+            time: (str/date HH:MM:SS)
+            date: (str/date YYYY-MM-DD)
+            datetime: (str/datetime ex. "2012-04-18T20:00:00-0800")
+        }
+
+        performance: (list[dict]) [
+                {
+                    artist: (dict) {
+                        uri: (str)
+                        displayName: (str)
+                        id: (int)
+                        identifier: (list)
+                    }
+                }
+            id: (int)
+            displayName: (str)
+            billingIndex: (int)
+            billing: (str) ['headline' OR 'support']
+        ]
+
+        location: (dict) {
+            city: (str)
+            lng: (float)
+            lat: (float)
+        }
+
+        venue: (dict) {
+            id: (int)
+            displayName: (str)
+            uri: (str)
+            lng: (float)
+            lat: (float)
+            metroArea: (dict) {
+                uri: (str)
+                displayName: (str)
+                country: (dict) {
+                    displayName: (str)
+                }
+                id: (int)
+                state: (dict) {
+                    displayName: (str)
+                }
+            }
+        }
+
+        status: (str) ['ok' OR 'cancelled']
+
+        popularity: (float)
+
+
+
+
+
+
+
+====================  DESCRIPTIONS GIVEN =======================
+
+
+    id	Integer
+        The Songkick ID of this venue
+
+    displayName	String
+        The name of this venue, as displayed on Songkick
+
+    uri	String
+        The URI of the venue on Songkick
+
+    city	Object
+        An object representing the city in which this venue is situated, in the form of a City object
+
+    lat	Float
+        The latitude value of this city (nullable)
+
+    lng	Float
+        The longitude value of this city (nullable)
+
+    street	String
+        The venue street (nullable)
+
+    zip	String
+        The venue zip/postal code (nullable)
+
+    phone	String
+        The venue phone number (nullable)
+
+    website	String
+        The venue website (nullable)
+
+    capacity
+        Integer	The capacity of the venue, if known (nullable)
+
+    description	String
+        A description of the venue (nullable)
+
+    metroArea	Object
+        An object containing further information about the location of this venue. This is mostly used for internal location identification so we recommend not using when integrating into a feature such as a listings page.
+
+
+
+
+
+
+
+
+============================================================================================
+
+ FULL EXAMPLE
+
+ {
+    "id":11129128,
+    "type":"Concert",
+    "uri":"http://www.songkick.com/concerts/11129128-wild-flag-at-fillmore?utm_source=PARTNER_ID&utm_medium=partner",
+    "displayName":"Wild Flag at The Fillmore (April 18, 2012)",
+    "start": {
+      "time":"20:00:00",
+      "date":"2012-04-18",
+      "datetime":"2012-04-18T20:00:00-0800"
+    },
+    "performance": [
+      {
+        "artist":{
+          "uri":"http://www.songkick.com/artists/29835-wild-flag?utm_source=PARTNER_ID&utm_medium=partner",
+          "displayName":"Wild Flag",
+          "id":29835,
+          "identifier":[]
+        },
+        "id":21579303,
+        "displayName":"Wild Flag",
+        "billingIndex":1,
+        "billing":"headline"
+      }
+    ],
+    "location": {
+      "city":"San Francisco, CA, US",
+      "lng":-122.4332937,
+      "lat":37.7842398
+    },
+    "venue": {
+      "id":6239,
+      "displayName":"The Fillmore",
+      "uri":"http://www.songkick.com/venues/6239-fillmore?utm_source=PARTNER_ID&utm_medium=partner",
+      "lng":-122.4332937,
+      "lat":37.7842398,
+      "metroArea": {
+        "uri":"http://www.songkick.com/metro_areas/26330-us-sf-bay-area?utm_source=PARTNER_ID&utm_medium=partner",
+        "displayName":"SF Bay Area",
+        "country": { "displayName":"US" },
+        "id":26330,
+        "state": { "displayName":"CA" }
+      }
+    },
+    "status":"ok",
+    "popularity":0.012763
+  }
