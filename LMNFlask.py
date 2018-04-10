@@ -1,8 +1,7 @@
-
-from flask import Flask, render_template
-
-app = Flask(__name__)
+from flask import render_template
+from flask_app import app
 log = app.logger  # log.info(), log.warn(), log.err
+from utils.scheduler.tasks import scheduler
 
 
 @app.route('/')
@@ -16,4 +15,6 @@ def goodbye_world():
 
 
 if __name__ == '__main__':
+    app.debug = False
+    scheduler.start()
     app.run()
