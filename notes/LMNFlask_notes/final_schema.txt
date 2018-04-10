@@ -1,0 +1,21 @@
+Artist:
+    PK: autoincrement int index
+    sk_id: int
+    artist.displayName: str
+
+Event:
+    PK: autoincrement int index
+    sk_id: int
+    Event.displayName: str
+    show_date: date
+    FK performance: int of artist.sk_id
+
+Performance:
+    PK: index autoincrement int
+    FK Artist.sk_id: int
+
+Venue:
+    PK: index autoincrement int
+    sk_id: int
+    displayName: str
+    city: str

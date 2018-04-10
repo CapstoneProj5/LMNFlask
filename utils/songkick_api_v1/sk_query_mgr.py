@@ -1,19 +1,24 @@
-import ipgetter
+#import ipgetter
 import requests
 import os
 
 
-sk_api_key = os.getenv('SK_API_KEY')
-search_venues_endpoint = "http://bit_api_mgr.songkick.com/bit_api_mgr/3.0/search/venues.json?query={}&apikey={}"
-search_artists_endpoint = "http://bit_api_mgr.songkick.com/bit_api_mgr/3.0/search/artists.json?apikey={}&query={}"
-search_artist_events_endpoint = "http://bit_api_mgr.songkick.com/bit_api_mgr/3.0/artists/{}/calendar.json?apikey={}"
-search_venue_events_endpoint = "http://bit_api_mgr.songkick.com/bit_api_mgr/3.0/venues/{}/calendar.json?apikey={}"
-search_events_loc_ip_endpoint = "http://bit_api_mgr.songkick.com/bit_api_mgr/3.0/events.json?apikey={}&location=ip:{}"
+# sk_api_key = os.getenv('SK_API_KEY')
+# sk_api_key = 'io09K9l3ebJxmxe2'
+sk_api_key = 'XFK6hX8iZ4LjPg6l'
+search_venues_endpoint = "http://api.songkick.com/api/3.0/search/venues.json?query={}&apikey={}"
+search_artists_endpoint = "http://api.songkick.com/api/3.0/search/artists.json?apikey={}&query={}"
+search_artist_events_endpoint = "http://api.songkick.com/api/3.0/3.0/artists/{}/calendar.json?apikey={}"
+search_venue_events_endpoint = "http://api.songkick.com/api/3.0/venues/{}/calendar.json?apikey={}"
+search_events_loc_ip_endpoint = "http://api.songkick.com/api/3.0/events.json?apikey={}&location=ip:{}"
 
 
 def search_events_by_ip_location():
 
-    ip = ipgetter.myip()
+    # ip = ipgetter.myip()
+    # sk_api_key = 'io09K9l3ebJxme2'
+    ipAddress = requests.get('https://api.ipify.org?format=json').json()
+    ip = str(ipAddress['ip'])
 
     response = requests.get(search_events_loc_ip_endpoint.format(sk_api_key, ip)).json()
     event_dict_list = response['resultsPage']['results']['event']
@@ -54,3 +59,7 @@ def get_venue_city_from_venue_data(venue_dict: dict) -> dict:
 
 
 # search_venues_by_name('first avenue and 7th st entry - mainroom')
+search_events_by_ip_location()
+# ipAddress = requests.get('https://api.ipify.org?format=json').json()
+# print(str(ipAddress))
+# print(ipAddress['ip'])
