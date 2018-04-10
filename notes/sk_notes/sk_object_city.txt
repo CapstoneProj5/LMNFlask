@@ -1,0 +1,11 @@
+SUMMARY
+
+    id: (int)
+
+    displayName: (str)
+
+    uri: (str)
+
+    country (dict) {
+        displayName: (str)
+    }

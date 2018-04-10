@@ -1,0 +1,115 @@
+import os
+import flask
+import flask_login
+from flask import Flask, render_template, request, json
+from flask_login import LoginManager
+from utils.songkick_api import sk_api_mgr
+
+app = Flask(__name__)
+app.secret_key = os.environ('LMN_Flask_Secret')
+
+log = app.logger # log.info(), log.warn(), log.error()
+
+login_manager = LoginManager()
+login_manager.init_app(app)
+
+test_users = {'superduperhulahooper@pyth.on': {'password': 'roundNotGround'}}
+
+
+class User(flask_login.UserMixin):
+    pass
+
+
+@login_manager.user_loader
+def user_loader(email):
+    if email not in test_users:
+        return
+    user = User()
+    user.id = email
+    return user
+
+
+@login_manager.request_loader
+def request_loader(request):
+    email = request.form.get('email')
+    if email not in test_users:
+        return
+
+    user = User()
+    user.id = email
+
+    user.is_authenticated(request.form['password'] == test_users[email]['password'])
+
+    return user
+
+
+@app.route('/login', methods=['GET', 'POST'])
+def login(rf: request.form = None):
+
+    if rf:
+
+        if flask.request.method == 'GET':
+            return render_template('login.html')
+
+        if flask.request.method == 'POST':
+            email = rf['email']
+            if rf['password'] == test_users[email]['password']:
+                user = User()
+                user.id = email
+                flask_login.login_user(user)
+                return render_template('admin.html')
+
+    else:
+
+        if flask.request.method == 'GET':
+            pass
+        if flask.request.method == 'POST':
+            username = request.args.get('username')
+            if username in test_users:
+                password = request.args.get('password')
+                if password == test_users[username]['password']:
+                    user = User()
+                    user.id = username
+                    flask_login.login_user(user)
+
+
+
+@app.route('/admin')
+@flask_login.login_required
+def admin():
+    pass
+
+
+@app.route('/search/artists')
+@flask_login.login_required
+def search_artists():
+    artist_name = request.args.get('artist')
+    result = sk_api_mgr.search_for_artist(artist_name)
+    resp = json.dumps({result})
+    print('resp = ' + str(resp))
+
+
+@app.route('/search/venues')
+@flask_login.login_required
+def search_venues():
+    pass
+
+
+@app.route('/search/artists/artist/upcoming')
+@flask_login.login_required
+def search_artist_upcoming_events():
+    pass
+
+
+@app.route('/')
+def hello_world():
+    return render_template("hello.html")
+
+
+@app.route('/goodbye')
+def goodbye_world():
+    return render_template("goodbye.html")
+
+
+if __name__ == '__main__':
+    app.run()

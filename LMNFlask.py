@@ -1,5 +1,6 @@
 from flask import render_template
 from flask_app import app
+log = app.logger  # log.info(), log.warn(), log.err
 from utils.scheduler.tasks import scheduler
 
 
