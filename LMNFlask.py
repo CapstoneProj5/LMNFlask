@@ -1,6 +1,8 @@
+
 from flask import Flask, render_template
 
 app = Flask(__name__)
+log = app.logger  # log.info(), log.warn(), log.err
 
 
 @app.route('/')

@@ -1,0 +1,55 @@
+
+
+==============================================
+FORMAT
+
+    {
+        id: (int)
+
+        displayName: (str)
+
+        uri: (str)
+
+        city: (dict) {
+
+            id:(int)
+            uri:(str)
+            displayName(str)
+            country: (dict) { displayName: (str) }
+        }
+
+        street: (str)
+
+        zip: (str)
+
+        lat: (float) [nullable]
+
+        lng: (float) [nullable]
+
+        phone: (str) [nullable]
+
+        website: (str) [nullable]
+
+        capacity: (int) [nullable]
+
+        description: (str) [nullable]
+
+        metroArea: (dict) {
+
+            id: (int)
+            uri: (str)
+            displayName: (str)
+        }
+
+    }
+
+
+
+
+
+===========================================================
+NOTE
+
+    metroArea	Object
+
+        An object containing further information about the location of this venue. This is mostly used for internal location identification so we recommend not using when integrating into a feature such as a listings page.

@@ -1,0 +1,53 @@
+{
+    id: (int)
+
+    displayName: (str)
+
+    uri: (str)
+
+    identifier: [
+        {
+            href: (str)
+            mbid: (str)
+        }
+    ]
+
+    onTourUntil: (str) "YYYY-MM-DD" or 'null'        *** listed as DATE in docs ***
+
+}
+
+
+
+======== DESCRIPTIONS =========
+
+    id ==
+        Artist Songkick ID
+
+    displayName ==
+        displayed name of Artist on Songkick
+
+    uri ==
+        uri of Artist on Songkick
+
+    identifier ==
+        "MusicBrainz identifiers for this artist. It is possible than an artist has multiple MusicBrainz IDs if we are not sure which one is correct"
+
+    onTourUntil ==
+        'end date of tour OR null if not touring'
+
+
+
+======= EXAMPLE GIVEN =========
+
+      {
+        id: 253846,
+        displayName: "Radiohead",
+        uri: "http://www.songkick.com/artists/253846-radiohead?utm_source=45852&utm_medium=partner",
+        identifier: [
+          {
+            href: "http://api.songkick.com/api/3.0/artists/mbid:a74b1b7f-71a5-4011-9441-d0b5e4122711.json",
+            mbid: "a74b1b7f-71a5-4011-9441-d0b5e4122711"
+          }
+        ],
+        onTourUntil: "2018-04-25"
+      }

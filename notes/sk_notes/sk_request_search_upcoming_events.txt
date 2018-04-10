@@ -1,0 +1,246 @@
+https://www.songkick.com/developer/event-search
+
+**search for event by artist name OR location
+
+====================================================
+REQUEST ENDPOINTS
+====================================================
+
+    JSON
+        http://api.songkick.com/api/3.0/events.json?apikey={your_api_key}
+
+    XML
+        http://api.songkick.com/api/3.0/events.xml?apikey={your_api_key}
+
+
+====================================================
+REQUEST PARAMETERS
+====================================================
+
+    apikey
+        Required
+        Your API key.
+
+    artist_name
+        Required unless location specified
+        The name of the artist to return events for.
+
+    location
+        Required unless artist_name specified
+        One of five options that dictate how the content returned should be localised.
+        See below for usage.
+
+            sk:<id>
+                Localise based on a Songkick metro area ID.
+                Use our location search to find an ID.
+
+            geo:<lat>,<lng>
+                Localise based on latitude / longitude.
+                Use decimal degrees positive = north and east.
+
+            ip:<ip>
+                Localise based on an IP address.
+                Return all results if address is not present in our database.
+
+            clientip
+                Localise based on IP address of client.
+                Useful for purely client side implementations.
+
+            (nothing)
+                Return all results.
+
+    min_date
+        Optional
+        A date in the form YYYY-MM-DD.
+
+    max_date
+        Optional
+        A date in the form YYYY-MM-DD.
+
+    type
+        Optional
+        The type of events you are searching for, either 'Concert' or 'Festival'.
+
+    page
+        Optional
+        Results are paginated.
+        This specifies the results page number. (First page = 1)
+
+    per_page
+        Optional
+        The number of results to return in each page. (Max 50)
+
+
+====================================================
+REQUEST NOTES
+====================================================
+
+    Date range
+        When specifying min_date or max_date, you need to use both parameters.
+        Use the same value for both to get events for a single day.
+        This search returns only upcoming events.
+
+    Artist
+        You should use the artist API calls to get events for a specific artist.
+        If you want to search by artist name, use the artist_name parameter.
+
+    Location
+        The options listed above can be used in the location parameter to specify how the content returned should be localised.
+
+        Note that Songkick internally uses defined metro areas rather than latitude / longitude / distance to locate relevant content.
+        This approach removes the need to specify an (often arbitrary) distance, and allows for more complex regions of interest
+            (e.g. respecting country / state boundaries and/or geographical obstacles).
+
+
+====================================================
+RESPONSE EXAMPLE (with call)
+====================================================
+
+
+    Search with artist name and IP address
+        http://api.songkick.com/api/3.0/events.json?apikey={your_api_key}&artist_name=vampire+weekend&location=ip:94.228.36.39
+
+        {
+            "resultsPage": {
+              "results": {
+                "event": [
+                  {
+                    "displayName": "Vampire Weekend at O2 Academy Brixton (February 16, 2010)",
+                    "type": "Concert",
+                    "uri": "http://www.songkick.com/concerts/3037536-vampire-weekend-at-o2-academy-brixton?utm_medium=partner&utm_source=PARTNER_ID",
+                    "venue": {
+                        "lng": -0.1187418,
+                        "displayName": "O2 Academy Brixton",
+                        "lat": 51.4681089,
+                        "id": 17522, ...
+                    },
+                    "location": {
+                        "lng": -0.1187418,
+                        "city": "London, UK",
+                        "lat": 51.4681089
+                    },
+                    "start": {
+                        "time": "19:30:00",
+                        "date": "2010-02-16",
+                        "datetime": "2010-02-16T19:30:00+0000"
+                    },
+                    "performance": [{
+                        "artist": {
+                            "uri": "http://www.songkick.com/artists/288696-vampire-weekend",
+                            "displayName": "Vampire Weekend",
+                            "id": 288696,
+                            "identifier": [{"mbid": "af37c51c-0790-4a29-b995-456f98a6b8c9"}]
+                        }
+                       "displayName": "Vampire Weekend",
+                       "billingIndex": 1,
+                       "id": 5380281,
+                       "billing": "headline"
+                    }],
+                    "id": 3037536
+                  },
+                  {
+                    "displayName": "Vampire Weekend at O2 Academy Brixton (February 17, 2010)",
+                    "type": "Concert",
+                    "uri": "http://www.songkick.com/concerts/3078766-vampire-weekend-at-o2-academy-brixton?utm_medium=partner&utm_source=PARTNER_ID",
+                    "venue": {
+                        "lng": -0.1187418,
+                        "displayName": "O2 Academy Brixton",
+                        "lat": 51.4681089,
+                        "id": 17522, ...
+                    },
+                    "location": {
+                        "lng": -0.1187418,
+                        "city": "London, UK",
+                        "lat": 51.4681089
+                    },
+                    "start": {
+                        "time": "19:30:00",
+                        "date": "2010-02-17",
+                        "datetime": "2010-02-17T19:30:00+0000"
+                    },
+                    "performance": [{
+                        "artist": {
+                            "uri": "http://www.songkick.com/artists/288696-vampire-weekend",
+                            "displayName": "Vampire Weekend",
+                            "id": 288696,
+                            "identifier": [{"mbid": "af37c51c-0790-4a29-b995-456f98a6b8c9"}]
+                        }
+                        "displayName": "Vampire Weekend",
+                        "billingIndex": 1,
+                        "id": 5468321,
+                        "billing": "headline"
+                    }],
+                    "id": 3078766
+                  }
+                ]
+              },
+              "page": 1,
+              "totalEntries": 2,
+              "perPage": 50
+            }
+          }
+
+
+
+    Search with artist name and date range
+          http://api.songkick.com/api/3.0/events.json?apikey={your_api_key}&artist_name=pixies&min_date=2009-10-01&max_date=2009-10-30
+
+          {
+            "resultsPage": {
+              "results": {
+                "event": [{
+                  "type": "Concert",
+                  "displayName": "Pixies at O2 Academy Brixton (October 9, 2009)",
+                  "venue": {
+                    "displayName": "O2 Academy Brixton",
+                    "id": 17522
+                  },
+                  "location": {
+                     city: "London, UK",
+                     lat: null,
+                     lng: null
+                  },
+                  "start": {
+                    "date": "2009-10-09",
+                    "time": "19:00:00"
+                  },
+                  "performance": [{
+                    "displayName": "Pixies",
+                    "id": 3681591
+                  }],
+                  "uri": "http://www.songkick.com/concerts/2342061-pixies-at-o2-academy-brixton",
+                  "id": 2342061
+                },
+                {
+                  "type": "Concert",
+                  "displayName": "Pixies at O2 Academy Brixton (October 6, 2009)",
+                  "venue": {
+                    "displayName": "O2 Academy Brixton",
+                    "id": 17522
+                  },
+                  "start": {
+                    "date": "2009-10-06",
+                    "time": "19:00:00"
+                  },
+                  "location": {
+                     city: "London, UK",
+                     lat: null,
+                     lng: null
+                  },
+                  "performance": [{
+                    "displayName": "Pixies",
+                    "id": 3681541
+                  }],
+                  "uri": "http://www.songkick.com/concerts/2342046-pixies-at-o2-academy-brixton",
+                  "id": 2342046
+                }]
+              },
+              "totalEntries": 2,
+              "perPage": 50,
+              "page": 1
+            }
+          }
+
+======================================================
+RESPONSE NOTES
+======================================================

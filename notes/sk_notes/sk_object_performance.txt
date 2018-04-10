@@ -1,0 +1,48 @@
+========== SUMMARY ==========
+
+    artist: {
+
+        uri: (str)
+        displayName: (str)
+        id: (int)
+        identifier: (list)
+    }
+
+    displayName: (str)
+
+    billingIndex: (int)
+
+    id: (int)
+
+    billing: (str)
+
+
+
+
+======== DESCRIPTIONS =========
+
+    billingIndex    -- performance order on billing event - i.e. 1st act index == 1
+
+    id              -- Songkick performance ID
+
+    billing         -- 'headline' OR 'support'
+
+
+
+
+========= EXAMPLE GIVEN =========
+
+ {
+    "artist":{
+      "uri":"http://www.songkick.com/artists/29835-wild-flag?utm_source=PARTNER_ID&utm_medium=partner",
+      "displayName":"Wild Flag",
+      "id":29835,
+      "identifier":[]
+    },
+    "displayName":"Wild Flag",
+    "billingIndex":1,
+    "id":21579303,
+    "billing":"headline"
+  }
+
+

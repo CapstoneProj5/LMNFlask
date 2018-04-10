@@ -1,0 +1,98 @@
+
+=====================================================
+REQUEST ENDPOINTS
+====================================================
+
+    JSON
+    http://api.songkick.com/api/3.0/artists/{artist_id}/gigography.json?apikey={your_api_key}
+
+    XML
+    http://api.songkick.com/api/3.0/artists/{artist_id}/gigography.xml?apikey={your_api_key}
+
+
+====================================================
+REQUEST PARAMETERS
+====================================================
+
+    min_date (YYYY-MM-DD)
+
+    max_date (YYYY-MM-DD)
+
+    page (for pagination; first page = 1)
+
+    per_page (# results/page, max == 50)
+
+    order (sort results by date: 'asc' or 'desc', default='asc')
+
+
+
+=====================================================
+RESPONSE FORMAT
+====================================================
+
+    resultsPage: (dict) {
+
+        results: (dict) {
+
+            event: (list[dict]) [{
+               id: (int)
+               type: (str)
+               uri: (str)
+               displayName: (str)
+               start: (dict) {
+                    time: (datetime HH:MM:SS)
+                    date: (date YYYY-MM-DD)
+                    datetime: (datetime ex. "2012-04-18T20:00:00-0800")
+               }
+
+
+            performance: (list[dict]) [{
+                artist: (dict) {
+                    id: (int)
+                    uri: (str)
+                    displayName: (str)
+                    identifier: (list)
+                }
+                id: (int)
+                displayName: (str)
+                billingIndex: (int)
+                billing: (str) ['headline' OR 'support']
+            }]
+
+            location: (dict) {
+                city: (str)
+                lng: (float)
+                lat: (float)
+            }
+
+            venue: (dict) {
+                id: (int)
+                displayName: (str)
+                uri: (str)
+                lng: (float)
+                lat: (float)
+                metroArea: (dict) {
+                    id: (int)
+                    uri: (str)
+                    displayName: (str)
+                    country: (dict) {displayName: (str)}
+                    state: (dict) {displayName: (str)}
+                }
+            }
+
+            status: (str) ['ok' OR 'cancelled']
+
+            popularity: (float)
+
+        }] **end event
+
+    } **end results
+
+    totalEntries: (int)
+
+    perPage: (int)
+
+    page: (int)
+
+    status: (str)
+
