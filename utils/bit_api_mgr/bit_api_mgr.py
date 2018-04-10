@@ -1,7 +1,7 @@
 
-from utils.api.bit_venue import Venue
-from utils.api.bit_event import Event
-from utils.api.bit_artist import Artist
+from utils.bit_api_mgr.bit_venue import Venue
+from utils.bit_api_mgr.bit_event import Event
+from utils.bit_api_mgr.bit_artist import Artist
 
 from json import JSONDecodeError
 from logging import Logger

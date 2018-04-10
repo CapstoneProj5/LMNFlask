@@ -1,15 +1,14 @@
 import ipgetter
 import requests
-from flask import json
 import os
-from utils.songkick_api.sk_venue import Venue
+
 
 sk_api_key = os.getenv('SK_API_KEY')
-search_venues_endpoint = "http://api.songkick.com/api/3.0/search/venues.json?query={}&apikey={}"
-search_artists_endpoint = "http://api.songkick.com/api/3.0/search/artists.json?apikey={}&query={}"
-search_artist_events_endpoint = "http://api.songkick.com/api/3.0/artists/{}/calendar.json?apikey={}"
-search_venue_events_endpoint = "http://api.songkick.com/api/3.0/venues/{}/calendar.json?apikey={}"
-search_events_loc_ip_endpoint = "http://api.songkick.com/api/3.0/events.json?apikey={}&location=ip:{}"
+search_venues_endpoint = "http://bit_api_mgr.songkick.com/bit_api_mgr/3.0/search/venues.json?query={}&apikey={}"
+search_artists_endpoint = "http://bit_api_mgr.songkick.com/bit_api_mgr/3.0/search/artists.json?apikey={}&query={}"
+search_artist_events_endpoint = "http://bit_api_mgr.songkick.com/bit_api_mgr/3.0/artists/{}/calendar.json?apikey={}"
+search_venue_events_endpoint = "http://bit_api_mgr.songkick.com/bit_api_mgr/3.0/venues/{}/calendar.json?apikey={}"
+search_events_loc_ip_endpoint = "http://bit_api_mgr.songkick.com/bit_api_mgr/3.0/events.json?apikey={}&location=ip:{}"
 
 
 def search_events_by_ip_location():
@@ -54,7 +53,4 @@ def get_venue_city_from_venue_data(venue_dict: dict) -> dict:
     return city_data
 
 
-search_venues_by_name('first avenue and 7th st entry - mainroom')
-
-
-
+# search_venues_by_name('first avenue and 7th st entry - mainroom')

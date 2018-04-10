@@ -1,10 +1,4 @@
-from utils.songkick_api.sk_artist import Artist
-from utils.songkick_api.sk_city import City
-from utils.songkick_api.sk_event import Event
-from utils.songkick_api.sk_location import Location
-from utils.songkick_api.sk_performance import Performance
-from utils.songkick_api.sk_venue import Venue
-# x
+
 
 def print_event_arguments(event_data: dict):
 
@@ -27,4 +21,3 @@ def print_event_arguments(event_data: dict):
     print('\tvenue metroArea.keys(): ' + ', '.join([key for key in event_data['venue']['metroArea'].keys()]))
     print('\nevent status: ' + event_data['status'])
     print('event popularity: ' + str(event_data['popularity']))
-
