@@ -1,6 +1,5 @@
-#import ipgetter
+
 import requests
-import os
 
 
 # sk_api_key = os.getenv('SK_API_KEY')
@@ -15,8 +14,6 @@ search_events_loc_ip_endpoint = "http://api.songkick.com/api/3.0/events.json?api
 
 def search_events_by_ip_location():
 
-    # ip = ipgetter.myip()
-    # sk_api_key = 'io09K9l3ebJxme2'
     ipAddress = requests.get('https://api.ipify.org?format=json').json()
     ip = str(ipAddress['ip'])
 
