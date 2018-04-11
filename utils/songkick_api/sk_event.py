@@ -1,11 +1,32 @@
-# show
-    # PK id: int
 
-    # Event.sk_id: int
+import datetime
 
-    # date: date
-    #           format = "yyyy - mm - dd hh: mm:ss -hh:mm"    (-hh:mm == difference from UTC)
+from utils.songkick_api.sk_venue import Venue
+from utils.songkick_api.sk_artist import Artist
 
-    # FK artist_id  # first artist returned (aka index 0)
 
-    # FK venue_id
+class Event(object):
+
+    def __init__(
+            self,
+            sk_id:  int,
+            date:   datetime.date,
+            artist: Artist,
+            venue:  Venue):
+
+            self.sk_id = sk_id
+            self.date = date
+            self.artist = artist
+            self.venue = venue
+
+    def __str__(self):
+            return "   \n" \
+            "ID: {}    \n" \
+            "Date: {}  \n" \
+            "Artist: {}\n" \
+            "Venue: {} \n".format(
+
+            self.sk_id,
+            self.date,
+            self.artist,
+            self.venue)
