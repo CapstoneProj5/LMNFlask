@@ -2,6 +2,7 @@
 class Artist(object):
 
     def __init__(
+
             self,
             sk_id: int,
             displayName: str):
@@ -10,6 +11,7 @@ class Artist(object):
             self.displayName = displayName
 
     def __str__(self):
+
             return " \n" \
             "ID: {}  \n" \
             "Name: {}\n".format(

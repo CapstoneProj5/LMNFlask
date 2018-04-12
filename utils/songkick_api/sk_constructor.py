@@ -1,7 +1,9 @@
+from logging import Logger
+
 from utils.songkick_api.sk_artist import Artist
 from utils.songkick_api.sk_event import Event
 from utils.songkick_api.sk_venue import Venue
-from LMNFlask import log
+log = Logger
 
 
 def build_venue(venue_data: dict, location_data: dict) -> Venue or False:
