@@ -1,58 +1,32 @@
 
-from utils.songkick_api.sk_location import Location
-from utils.songkick_api.sk_performance import Performance
+import datetime
+
 from utils.songkick_api.sk_venue import Venue
+from utils.songkick_api.sk_artist import Artist
 
 
-class Event:
+class Event(object):
 
     def __init__(
             self,
-            sk_id:       int,
-            event_type:  str,
-            uri:         str,
-            displayName: str,
-            start:       dict,
-            performances:  [Performance] or [dict],
-            location:    Location or dict,
-            venue:       Venue or dict,
-            status:      str,
-            popularity:  float):
+            sk_id:  int,
+            date:   datetime.date,
+            artist: Artist,
+            venue:  Venue):
 
             self.sk_id = sk_id
-            self.event_type = event_type
-            self.uri = uri
-            self.event_name = displayName
-            self.start = start
-            self.performances = performances
-            self.location = location
+            self.date = date
+            self.artist = artist
             self.venue = venue
-            self.status = status
-            self.popularity = popularity
 
-    def __str__(self) -> str:
-
-        return "           \n" \
-           "ID: {}         \n" \
-           "Type: {}       \n" \
-           "URI: {}        \n" \
-           "Name: {}       \n" \
-           "Date: {}       \n" \
-           "Time: {}       \n" \
-           "Performers: {} \n" \
-           "Location: {}   \n" \
-           "Venue: {}      \n" \
-           "Status: {}     \n" \
-           "Popularity: {} \n".format(
+    def __str__(self):
+            return "   \n" \
+            "ID: {}    \n" \
+            "Date: {}  \n" \
+            "Artist: {}\n" \
+            "Venue: {} \n".format(
 
             str(self.sk_id),
-            self.event_type,
-            self.uri,
-            self.event_name,
-            self.start['date'],
-            self.start['time'],
-            ', \n'.join([performance.__str__() for performance in self.performances]),
-            self.location.__str__(),
-            self.venue.__str__(),
-            self.status,
-            str(self.popularity))
+            self.date,
+            self.artist.displayName,
+            self.venue.displayName)

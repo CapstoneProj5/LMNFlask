@@ -1,7 +1,7 @@
 import os
 import flask
 import flask_login
-from flask import Flask, render_template, request, json
+from flask import Flask, render_template, request, json, jsonify
 from flask_login import LoginManager
 from utils.songkick_api import sk_api_mgr
 
@@ -12,6 +12,8 @@ log = app.logger # log.info(), log.warn(), log.error()
 
 login_manager = LoginManager()
 login_manager.init_app(app)
+
+
 
 test_users = {'superduperhulahooper@pyth.on': {'password': 'roundNotGround'}}
 

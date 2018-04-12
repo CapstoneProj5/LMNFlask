@@ -1,0 +1,48 @@
+Artist:
+    PK: autoincrement int index
+    sk_id: int
+    artist.displayName: str
+
+Event:
+    PK: autoincrement int index
+    sk_id: int
+    Event.displayName: str
+    show_date: date
+    FK performance: int of artist.sk_id
+
+Performance:
+    PK: index autoincrement int
+    FK Artist.sk_id: int
+
+Venue:
+    PK: index autoincrement int
+    sk_id: int
+    displayName: str
+    city: str
+
+
+
+
+    ============================================================
+
+    show
+        PK id:          int
+        Event.sk_id:    int
+        date:           date
+                            format=yyyy-mm-dd hh:mm:ss-hh:mm  (  -hh:mm == difference from UTC)
+        FK              artist_id #first artist returned (aka index 0)
+        FK              venue_id
+
+
+    Artist
+        PK artist_id:   int
+        Artist.sk_id:   int
+        displayName:    str
+
+
+    Venue
+        PK venue_id
+        Venue.sk_id:    int
+        displayName:    str
+        city:           str
+        state:          str.format(XX)   # 2 letter state format
