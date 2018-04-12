@@ -26,7 +26,7 @@ class Event(object):
             "Artist: {}\n" \
             "Venue: {} \n".format(
 
-            self.sk_id,
+            str(self.sk_id),
             self.date,
-            self.artist,
-            self.venue)
+            self.artist.displayName,
+            self.venue.displayName)

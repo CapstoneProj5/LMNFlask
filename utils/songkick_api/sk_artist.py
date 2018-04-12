@@ -14,5 +14,5 @@ class Artist(object):
             "ID: {}  \n" \
             "Name: {}\n".format(
 
-            self.sk_id,
+            str(self.sk_id),
             self.displayName)

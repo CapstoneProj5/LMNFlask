@@ -22,7 +22,7 @@ class Venue(object):
             "City: {} \n" \
             "State: {}\n".format(
 
-            self.sk_id,
+            str(self.sk_id),
             self.displayName,
             self.city,
             self.state)
