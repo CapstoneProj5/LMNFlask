@@ -1,7 +1,5 @@
 Flask
 Flask-SQLAlchemy
-Celery
-dramatiq[rabbitmq, watch]
 requests
 apscheduler
 sqlalchemy
