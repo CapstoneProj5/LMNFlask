@@ -1,13 +1,13 @@
 from logging import Logger
 
 import requests
-
+import os
 import utils.songkick_api.sk_constructor as Constructor
 from utils.songkick_api.sk_event import Event
 
 log = Logger
 search_ip_endpoint = "http://api.songkick.com/api/3.0/events.json?apikey={}&location=ip:{}"
-sk_api_key = 'XFK6hX8iZ4LjPg6l'
+sk_api_key = os.getenv('SK_API_KEY')
 
 
 def search_local_events_for_ip(ip_addr: str) -> [dict]:
