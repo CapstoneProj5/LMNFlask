@@ -55,7 +55,11 @@ def build_event(event_data: dict) -> Event or False:
             event_data['id'],
             event_data['start']['datetime'],
             event_data['performance'][0]['artist']['displayName'],
-            event_data['venue']['displayName'])
+            event_data['performance'][0]['artist']['id'],
+            event_data['venue']['displayName'],
+            event_data['venue']['id'],
+            event_data['location']['city'].split(',')[0],
+            event_data['venue']['metroArea']['state']['displayName'])
 
         return new_event
 

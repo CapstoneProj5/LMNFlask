@@ -10,15 +10,23 @@ class Event(object):
     def __init__(
 
             self,
-            sk_id:  int,
-            date:   datetime.date,
-            artist: Artist,
-            venue:  Venue):
+            sk_id:     int,
+            date:      datetime.date,
+            artist:    Artist,
+            artist_id: int,
+            venue:     Venue,
+            venue_id:  int,
+            city:      str,
+            state:     str):
 
             self.sk_id = sk_id
             self.date = date
             self.artist = artist
+            self.artist_id = artist_id
             self.venue = venue
+            self.venue_id = venue_id
+            self.city = city
+            self.state = state
 
     def __str__(self):
 
@@ -36,8 +44,11 @@ class Event(object):
     def __dict__(self):
 
         return {
-            'sk_id':  self.sk_id,
-            'date':   self.date,
-            'artist': self.artist,
-            'venue':  self.venue}
-
+            'sk_id':     self.sk_id,
+            'date':      self.date,
+            'artist':    self.artist,
+            'artist_id': self.artist_id,
+            'venue':     self.venue,
+            'venue_id':  self.venue_id,
+            'city':      self.city,
+            'state':     self.state}

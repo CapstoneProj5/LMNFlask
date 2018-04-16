@@ -12,6 +12,8 @@ log = Logger
 
 @app.route('/events')
 def build_response():
+    request_ip = request.remote_addr
+    print('Request IP: ' + str(request_ip))
     response_data = build_events(request)
     return jsonify(response_data), 200
 
@@ -27,7 +29,8 @@ def goodbye_world():
 
 
 def build_events(req: request) -> [Event]:
-    # client_ip = req.remote_addr  # TODO When running this non-locally: uncomment this line AND comment out the line below
+    # client_ip = req.remote_addr
+    #  TODO When running this non-locally: uncomment this line AND comment out the line below
     client_ip = '75.73.22.98'
     log('Events requested from: ' + str(client_ip))
     api_data = api_mgr.search_local_events_for_ip(client_ip)

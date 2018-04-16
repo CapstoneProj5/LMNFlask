@@ -45,4 +45,3 @@ def serialize_event_list(event_list):
     for event in event_list:
         events_dict_list.append(event.__dict__())
     return events_dict_list
-

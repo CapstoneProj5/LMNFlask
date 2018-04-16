@@ -4,7 +4,7 @@ class Artist(object):
     def __init__(
 
             self,
-            sk_id: int,
+            sk_id:       int,
             displayName: str):
 
             self.sk_id = sk_id
