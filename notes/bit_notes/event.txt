@@ -1,0 +1,45 @@
+EventData:
+#     type: object
+#     required:
+#     - id
+#     - artist_id
+#     - url
+#     - on_sale_datetime
+#     - datetime
+#     - venue
+#     - offers
+#     - lineup
+#     properties:
+#       id:
+#         type: string
+#         format: integer
+#         example: '13722599'
+#       artist_id:
+#         type: string
+#         format: integer
+#         example: '438314'
+#       url:
+#         type: string
+#         format: url
+#         example: 'http://www.bandsintown.com/event/13722599?app_id=foo&artist=Skrillex&came_from=67'
+#       on_sale_datetime:
+#         type: string
+#         format: datetime
+#         example: '2017-03-01T18:00:00'
+#       datetime:
+#         type: string
+#         format: datetime
+#         example: '2017-03-19T11:00:00'
+#       description:
+#         type: string
+#         example: 'This is a description'
+#       venue:
+#         $ref: '#/definitions/VenueData'
+#       offers:
+#         type: array
+#         items:
+#           $ref: '#/definitions/OfferData'
+#       lineup:
+#         type: array
+#         items:
+#           type: string

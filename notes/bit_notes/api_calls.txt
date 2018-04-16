@@ -1,0 +1,99 @@
+# Manager for retrieving and formatting data from the Bandsintown API
+
+# /artists/{artistname}:
+#     get:
+#       tags:
+#       - artist information
+#       summary: Get artist information
+#       operationId: artist
+#       description: |
+#         Get artist information
+#       produces:
+#       - application/json
+
+#       parameters:
+
+#       - in: path
+#         name: artistname
+#         description: "The name of the artist. If it contains one of the special characters below, please be sure to replace it by the corresponding
+#                       code: for / use %252F, for ? use %253F, for * use %252A, and for \" use %27C"
+#         required: true
+#         type: # string
+#       - in: query
+#         name: app_id
+#         description: The application ID assigned to you by Bandsintown
+#         required: true
+#         type: # string
+#       responses:
+#         200:
+#           description: "200 response"
+#           schema:
+#             $ref: '#/definitions/ArtistData'
+
+
+
+
+# / artists / {artistname} / events:
+# get:
+# tags:
+# - artist
+# events
+# summary: Get
+# all
+# upcoming
+# artist
+# events or all
+# past and upcoming
+# events
+# within
+# a
+# date
+# range
+# operationId: artistEvents
+# description: |
+# artist
+# events
+# produces:
+# - application / json
+# parameters:
+# - in: path
+# name: artistname
+# description: "The name of the artist. If it contains one of the special characters below, please be sure to replace it by the corresponding code: for / use %252F, for ? use %253F, for * use %252A, and for \" use %27C"
+# required: true
+# type: #string
+# - in: query
+# name: app_id
+# description: The
+# application
+# ID
+# assigned
+# to
+# you
+# by
+# Bandsintown
+# required: true
+# type: #string
+# - in: query
+# name: date
+# description: Date
+# range
+# of
+# requested
+# shows
+# e.g.
+# 2015 - 05 - 05, 2017 - 05 - 05
+# required: false
+# type: #string
+# responses:
+# 200:
+# description: Shows
+# within
+# a
+# date
+# range
+# for the selected artist
+# schema:
+# type: #array
+# items:
+# $ref: '#/definitions/EventData'
+

@@ -1,0 +1,30 @@
+VenueData:
+#     type: object
+#     required:
+#     - name
+#     - latitude
+#     - longitude
+#     - city
+#     - region
+#     - country
+#     properties:
+#       name:
+#         type: string
+#         example: 'Encore Beach Club'
+#       latitude:
+#         type: string
+#         format: double
+#         example: '36.12714'
+#       longitude:
+#         type: string
+#         format: double
+#         example: '-115.1629562'
+#       city:
+#         type: string
+#         example: 'Las Vegas'
+#       region:
+#         type: string
+#         example: 'NV'
+#       country:
+#         type: string
+#         example: 'United States'
