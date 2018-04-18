@@ -18,3 +18,7 @@ class Artist(object):
 
             str(self.sk_id),
             self.displayName)
+
+    def __eq__(self, other):
+
+        return self.sk_id == other.sk_id and self.displayName == other.displayName

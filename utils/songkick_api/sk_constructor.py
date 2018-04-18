@@ -1,8 +1,11 @@
 from logging import Logger
 
-from utils.songkick_api.sk_artist import Artist
-from utils.songkick_api.sk_event import Event
-from utils.songkick_api.sk_venue import Venue
+from sk_artist import Artist
+from sk_event import Event
+from sk_venue import Venue
+# from utils.songkick_api.sk_artist import Artist
+# from utils.songkick_api.sk_event import Event
+# from utils.songkick_api.sk_venue import Venue
 log = Logger
 
 
@@ -66,4 +69,3 @@ def build_event(event_data: dict) -> Event or False:
     except IndexError:
         log('IndexError from build_event()')
         return False
-

@@ -1,8 +1,9 @@
 
 import datetime
-
-from utils.songkick_api.sk_venue import Venue
-from utils.songkick_api.sk_artist import Artist
+from sk_artist import Artist
+from sk_venue import Venue
+# from utils.songkick_api.sk_venue import Venue
+# from utils.songkick_api.sk_artist import Artist
 
 
 class Event(object):
@@ -40,4 +41,3 @@ class Event(object):
             'date':   self.date,
             'artist': self.artist,
             'venue':  self.venue}
-
