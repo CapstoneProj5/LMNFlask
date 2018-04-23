@@ -27,3 +27,6 @@ class Venue(object):
             self.city,
             self.state)
 
+    def __eq__(self, other):
+
+        return self.sk_id == other.sk_id and self.displayName == other.displayName and self.city == other.city and self.state == other.state

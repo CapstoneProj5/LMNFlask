@@ -31,8 +31,8 @@ class Event(object):
 
             str(self.sk_id),
             self.date,
-            self.artist.displayName,
-            self.venue.displayName)
+            self.artist,
+            self.venue)
 
     def __dict__(self):
 
@@ -41,3 +41,7 @@ class Event(object):
             'date':   self.date,
             'artist': self.artist,
             'venue':  self.venue}
+
+    def __eq__(self, other):
+
+        return self.sk_id == other.sk_id and self.date == other.date and self.artist == other.artist and self.venue == other.venue
