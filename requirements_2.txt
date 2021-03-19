@@ -16,7 +16,7 @@ greenlet==0.4.13
 idna==2.6
 ipgetter==0.7
 itsdangerous==0.24
-Jinja2==2.10
+Jinja2==2.11.3
 kombu==4.1.0
 MarkupSafe==1.0
 marshmallow==2.15.0
