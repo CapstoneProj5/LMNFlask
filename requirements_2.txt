@@ -27,7 +27,7 @@ pika==0.11.2
 prometheus-client==0.2.0
 pystun==0.1.0
 pytz==2018.4
-PyYAML==3.12
+PyYAML==5.4
 requests==2.18.4
 six==1.11.0
 SQLAlchemy==1.2.6
